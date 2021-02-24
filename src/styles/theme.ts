@@ -1,6 +1,7 @@
 export default {
   colors: {
     white: '#ffffff',
+    dark: '#06092B',
     background: '#f2f3f5',
     grayLine: '#dcdde0',
     text: '#666666',
@@ -10,6 +11,6 @@ export default {
     green: '#4cd62b',
     blue: '#5965e0',
     blueDark: '#4953b8',
-    blueTwitter: '#2aa9e0',
-  },
-} as const;
+    blueTwitter: '#2aa9e0'
+  }
+} as const

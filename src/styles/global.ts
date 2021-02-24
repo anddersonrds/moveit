@@ -55,8 +55,9 @@ const GlobalStyles: GlobalStyleComponent<
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
 
-      ${!removeBg && css`
-        background-color: ${theme.colors.mainBg};
+      ${!removeBg &&
+      css`
+        background-color: ${theme.colors.dark};
       `}
     }
   `};
