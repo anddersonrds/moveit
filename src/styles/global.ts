@@ -13,6 +13,42 @@ const GlobalStyles: GlobalStyleComponent<
   GlobalStyleProps,
   DefaultTheme
 > = createGlobalStyle`
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+        url('/fonts/inter-v3-latin-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local(''),
+        url('/fonts/inter-v3-latin-500.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local(''),
+        url('/fonts/inter-v3-latin-600.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local(''),
+        url('/fonts/rajdhani-v10-latin-600.woff2') format('woff2');
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -26,16 +62,26 @@ const GlobalStyles: GlobalStyleComponent<
     }
   }
 
-  body {
-    font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: ${theme.colors.background};
-    color: ${theme.colors.text};
-  }
+  ${({ theme, removeBg }) => css`
+    body {
+      color: ${theme.colors.text};
+      background: ${theme.colors.background};
 
-  body, button, input, textarea {
-    font: 400, 1rem, 'Inter', sans-serif;
-  }
+      /* ${
+        !removeBg &&
+        css`
+          background-color: ${theme.colors.dark};
+        `
+      }; */
+    }
+
+    body, input, textarea, button {
+      font-family: ${theme.font.inter};
+      font-size: ${theme.font.sizes.medium};
+      font-weight: ${theme.font.light};
+    }
+  `};
+
 
   button {
     cursor: pointer;
@@ -46,31 +92,15 @@ const GlobalStyles: GlobalStyleComponent<
     text-decoration: none;
   }
 
-  ${({ theme, removeBg }) => css`
-    html {
-      font-size: 62.5%;
-    }
-
-    body {
-      font-family: ${theme.font.family};
-      font-size: ${theme.font.sizes.medium};
-
-      ${!removeBg &&
-      css`
-        background-color: ${theme.colors.dark};
-      `}
-    }
-  `};
-
   @media(max-width: 1080px) {
     html {
-      font-size: 93.75%; // This will reduce the font size by one pixel from the default 16px
+      font-size: 93.75%;
     }
   }
 
   @media(max-width: 720px) {
     html {
-      font-size: 87.5%; // This will reduce the font size by two pixel from the default 16px
+      font-size: 87.5%;
     }
   }
 `
