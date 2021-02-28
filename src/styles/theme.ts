@@ -8,8 +8,19 @@ export default {
     normal: 500,
     bold: 600,
     sizes: {
-      medium: '1rem'
+      small: '1rem',
+      medium: '1.5rem',
+      huge: '8.5rem'
     }
+  },
+  spacings: {
+    xxsmall: '0.5rem',
+    xsmall: '1rem',
+    small: '1.5rem',
+    medium: '2rem',
+    large: '2.5rem',
+    xlarge: '3rem',
+    xxlarge: '3.5rem'
   },
   colors: {
     white: '#ffffff',

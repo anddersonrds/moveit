@@ -77,7 +77,7 @@ const GlobalStyles: GlobalStyleComponent<
 
     body, input, textarea, button {
       font-family: ${theme.font.inter};
-      font-size: ${theme.font.sizes.medium};
+      font-size: ${theme.font.sizes.small};
       font-weight: ${theme.font.light};
     }
   `};
