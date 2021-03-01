@@ -10,8 +10,8 @@ function App({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={theme}>
       <Head>
         <title>MoveIt</title>
-        <link rel="shortcut icon" href="/img/favicon.ico" />
-        <link rel="apple-touch-icon" href="/img/favicon.ico" />
+        <link rel="shortcut icon" href="/img/favicon.png" />
+        <link rel="apple-touch-icon" href="/img/favicon.png" />
         <meta
           name="description"
           content="A simple application to work with Typescript, React, NextJs
